@@ -1,0 +1,22 @@
+
+#-------------------------printing odd numbers between a range -------------
+#!/bin/bash
+
+counter=1;
+
+if [ $counter -lt 100 ]; then
+
+   while [ $counter -lt 99 ];do         ||          while [ $counter%2 != 0 ];do  #actually when this is used it is entering into an infinite loop 
+    
+    echo "$counter"
+    counter=$(($counter+2))
+    
+    done
+
+fi
+
+----------------------
+
+for ((counter = 1; counter <= 99; counter += 2)); do
+    echo "$counter"
+done
